@@ -29,19 +29,19 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: ./app/
+        working-directory: ./src/
     steps:
       - name: Checkout
         uses: actions/checkout@v3
       - name: Detect package manager
         id: detect-package-manager
         run: |
-          if [ -f "${{ github.workspace }}/app/yarn.lock" ]; then
+          if [ -f "${{ github.workspace }}/src/yarn.lock" ]; then
             echo "::set-output name=manager::yarn"
             echo "::set-output name=command::install"
             echo "::set-output name=runner::yarn"
             exit 0
-          elif [ -f "${{ github.workspace }}/app/package.json" ]; then
+          elif [ -f "${{ github.workspace }}/src/package.json" ]; then
             echo "::set-output name=manager::npm"
             echo "::set-output name=command::ci"
             echo "::set-output name=runner::npx --no-install"
@@ -55,7 +55,7 @@ jobs:
         with:
           node-version: "16"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
-          cache-dependency-path: './app/yarn.lock'
+          cache-dependency-path: './src/yarn.lock'
       - name: Setup Pages
         uses: actions/configure-pages@v2
         with:
@@ -83,7 +83,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: ./app/out
+          path: ./src/out
 
   # Deployment job
   deploy:
