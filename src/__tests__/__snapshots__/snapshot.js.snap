@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders homepage unchanged 1`] = `
+<div>
+  <header>
+    <span
+      class="sc-d5db6f74-0 gNzUDk"
+    >
+      Mohammad
+    </span>
+    <img
+      alt="mohammad bagherani"
+      data-nimg="1"
+      decoding="async"
+      height="288"
+      src="/_next/image?url=%2Fimages%2Fmohammad-bagherani.jpg&w=640&q=75"
+      srcset="/_next/image?url=%2Fimages%2Fmohammad-bagherani.jpg&w=384&q=75 1x, /_next/image?url=%2Fimages%2Fmohammad-bagherani.jpg&w=640&q=75 2x"
+      style="color: transparent;"
+      width="288"
+    />
+  </header>
+  <main />
+</div>
+`;

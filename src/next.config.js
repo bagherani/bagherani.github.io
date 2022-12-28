@@ -13,6 +13,10 @@ const nextConfig = {
       '/': { page: '/' },
     }
   },
+  compiler: {
+    styledComponents: {
+    },
+  }
 }
 
 module.exports = nextConfig
