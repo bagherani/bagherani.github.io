@@ -3,6 +3,11 @@
 exports[`renders homepage unchanged 1`] = `
 <div>
   <header>
+    <span
+      class="sc-d5db6f74-0 gNzUDk"
+    >
+      Mohammad
+    </span>
     <img
       alt="mohammad bagherani"
       data-nimg="1"
