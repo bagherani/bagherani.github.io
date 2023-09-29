@@ -8,7 +8,7 @@ export function GoogleAnalytics() {
         src={"https://www.googletagmanager.com/gtag/js?id=G-SHHLFJ6CEB"}
       />
 
-      <Script>
+      <Script id="google-analytics">
         {`
              window.dataLayer = window.dataLayer || [];
              function gtag(){dataLayer.push(arguments);}
