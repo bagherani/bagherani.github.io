@@ -45,8 +45,8 @@ jobs:
             echo "manager=npm" >> $GITHUB_OUTPUT
             echo "command=ci" >> $GITHUB_OUTPUT
             echo "runner=npx --no-install" >> $GITHUB_OUTPUT
-            echo "test=test" >> $GITHUB_OUTPUT
-            echo "lint=run lint" >> $GITHUB_OUTPUT
+            echo "test=run test" >> $GITHUB_OUTPUT
+            echo "lint=lint" >> $GITHUB_OUTPUT
             exit 0
           else
             echo "Unable to determine package manager"
@@ -76,9 +76,9 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Run linter
-        run: ${{ steps.detect-package-manager.outputs.runner }} next lint
+        run: ${{ steps.detect-package-manager.outputs.manager }} next lint
       - name: Run tests
-        run: ${{ steps.detect-package-manager.outputs.runner }} ${{ steps.detect-package-manager.outputs.test }}
+        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.test }}
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
