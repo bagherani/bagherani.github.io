@@ -66,6 +66,8 @@
     "eslint-plugin-turbo": "latest",
     "jest": "latest",
     "jest-environment-jsdom": "latest",
+    "jest-mock-extended": "latest",
+    "jest-extended": "latest",
     "postcss": "latest",
     "prettier": "latest",
     "tailwindcss": "latest",
