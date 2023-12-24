@@ -1,0 +1,22 @@
+.home__container {
+  height: 100vh;
+}
+.home__heading {
+  background: linear-gradient(-45deg, #ee7752a0, #e73c7ea0, #23a6d5a0, #23d5aba0);
+  background-size: 400% 400%;
+  animation: anim-background-gradient 15s linear infinite;
+  background-clip: text;
+  color: transparent;
+}
+
+@keyframes anim-background-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

@@ -15,4 +15,16 @@ describe('Page', () => {
     expect(heading).toBeInTheDocument();
     expect(heading).toHaveTextContent('MOHI BAGHERANI');
   });
+
+  it('should have a container', () => {
+    // Arrange
+    const containerId = 'home';
+
+    // Act
+    render(<Page />);
+
+    // Assert
+    const container = screen.getByTestId(containerId);
+    expect(container).toBeInTheDocument();
+  });
 });
