@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+# jest
+/.jest/coverage
+
 # production
 /build
 
