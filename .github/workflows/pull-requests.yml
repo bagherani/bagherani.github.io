@@ -7,7 +7,7 @@ name: Check the PR before merge
 on:
   # Runs on pushes targeting the default branch
   pull_request:
-    branches: ['main']
+    branches: ["main"]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -19,8 +19,7 @@ permissions:
   id-token: write
 
 jobs:
-  # Build job
-  build:
+  check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -49,7 +48,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: "20"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
         uses: actions/configure-pages@v3
