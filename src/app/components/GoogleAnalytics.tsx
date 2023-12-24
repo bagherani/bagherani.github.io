@@ -1,14 +1,15 @@
-import Script from "next/script";
+import Script from 'next/script';
 
 export function GoogleAnalytics() {
   return (
     <>
       <Script
         async
-        src={"https://www.googletagmanager.com/gtag/js?id=G-SHHLFJ6CEB"}
+        data-testid="google-analytics-script"
+        src={'https://www.googletagmanager.com/gtag/js?id=G-SHHLFJ6CEB'}
       />
 
-      <Script id="google-analytics">
+      <Script data-testid="google-analytics-inline-script" id="google-analytics">
         {`
              window.dataLayer = window.dataLayer || [];
              function gtag(){dataLayer.push(arguments);}

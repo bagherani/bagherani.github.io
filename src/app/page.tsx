@@ -1,3 +1,3 @@
-export default function Home() {
-  return <h1>MOHI BAGHERANI</h1>;
+export default function Page() {
+  return <h1 data-testid="heading">MOHI BAGHERANI</h1>;
 }
