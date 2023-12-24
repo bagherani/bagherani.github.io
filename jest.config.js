@@ -13,6 +13,7 @@ module.exports = {
     '!**/*.config.ts',
     '!**/.jest/**',
     '!**/.next/**',
+    '!**/_next/**',
     '!**/mocks/**',
   ],
   coverageDirectory: '.jest/coverage',
@@ -29,6 +30,14 @@ module.exports = {
   resetMocks: true,
   resetModules: true,
   restoreMocks: true,
+  transform: {
+    '^.+\\.(ts|tsx|js|jsx)$': [
+      'ts-jest',
+      {
+        tsconfig: '<rootDir>/tsconfig.spec.json',
+      },
+    ],
+  },
   transformIgnorePatterns: [
     'node_modules/(?!(query-string|decode-uri-component|split-on-first|filter-obj)/)',
   ],
