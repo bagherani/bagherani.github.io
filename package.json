@@ -1,12 +1,43 @@
 {
-  "name": "mohi",
+  "name": "bagherani-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
+    "commit": "git-cz",
+    "dev": "next dev",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json}\"",
+    "lint": "next lint",
     "start": "next start",
-    "lint": "next lint"
+    "test": "jest --verbose",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
+    "rules": {
+      "body-case": [
+        2,
+        "always",
+        [
+          "lower-case",
+          "upper-case",
+          "camel-case",
+          "kebab-case",
+          "pascal-case",
+          "sentence-case",
+          "snake-case",
+          "start-case"
+        ]
+      ]
+    }
   },
   "dependencies": {
     "react": "latest",
@@ -14,14 +45,31 @@
     "next": "latest"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "@types/react": "latest",
+    "@commitlint/cli": "latest",
+    "@commitlint/config-conventional": "latest",
+    "@commitlint/cz-commitlint": "latest",
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/react": "latest",
+    "@types/jest": "latest",
     "@types/node": "latest",
+    "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@typescript-eslint/eslint-plugin": "latest",
+    "@typescript-eslint/parser": "latest",
     "autoprefixer": "latest",
-    "postcss": "latest",
-    "tailwindcss": "latest",
     "eslint": "latest",
-    "eslint-config-next": "latest"
+    "eslint-config-next": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-config-turbo": "latest",
+    "eslint-plugin-react": "latest",
+    "eslint-plugin-sort-keys-fix": "latest",
+    "eslint-plugin-turbo": "latest",
+    "jest": "latest",
+    "jest-environment-jsdom": "latest",
+    "postcss": "latest",
+    "prettier": "latest",
+    "tailwindcss": "latest",
+    "ts-jest": "latest",
+    "typescript": "latest"
   }
 }
