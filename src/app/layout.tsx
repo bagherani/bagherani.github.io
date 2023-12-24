@@ -1,13 +1,15 @@
 import "./globals.css";
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+
+import type { Metadata } from "next";
+
 import { GoogleAnalytics } from "./components/GoogleAnalytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Mohi Bagherani",
   description: "Mohammad Bagherani's personal website",
+  title: "Mohi Bagherani",
 };
 
 export default function RootLayout({
