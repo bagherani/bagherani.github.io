@@ -1,1 +1,1 @@
-module.exports = { src: 'test-file-src' };
+module.exports = '/img.jpg';

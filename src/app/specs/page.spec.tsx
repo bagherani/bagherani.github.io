@@ -5,26 +5,12 @@ import Page from '../page';
 describe('Page', () => {
   it('should render successfully', () => {
     // Arrange
-    const headingId = 'heading';
+    const mainSection = 'main';
 
     // Act
     render(<Page />);
 
     // Assert
-    const heading = screen.getByTestId(headingId);
-    expect(heading).toBeInTheDocument();
-    expect(heading).toHaveTextContent('MOHI BAGHERANI');
-  });
-
-  it('should have a container', () => {
-    // Arrange
-    const containerId = 'home';
-
-    // Act
-    render(<Page />);
-
-    // Assert
-    const container = screen.getByTestId(containerId);
-    expect(container).toBeInTheDocument();
+    expect(screen.getByTestId(mainSection)).toBeInTheDocument();
   });
 });

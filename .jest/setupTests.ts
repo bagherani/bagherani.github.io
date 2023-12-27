@@ -1,5 +1,6 @@
 import '@testing-library/jest-dom';
 import 'jest-extended/all';
+import React from 'react';
 
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -15,3 +16,10 @@ Object.defineProperty(window, 'location', {
   },
   writable: true,
 });
+
+jest.mock('next/image', () => ({
+  __esModule: true,
+  default: (props: { src: string; alt: string; width: number; height: number }) => {
+    return React.createElement('img', props);
+  },
+}));
