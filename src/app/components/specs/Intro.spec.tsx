@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 
 import { Intro } from '../Intro';
 
-describe('Page', () => {
+describe('Intro', () => {
   beforeEach(() => {
     // Act
     render(<Intro />);
@@ -27,7 +27,7 @@ describe('Page', () => {
     const element = screen.getByTestId('description');
     expect(element).toBeInTheDocument();
     expect(element.tagName).toBe('P');
-    expect(element).toHaveTextContent('SENIOR FRONTEND DEVELOPER');
+    expect(element).toHaveTextContent('Software Engineer');
   });
 
   it('should have an avator', () => {
