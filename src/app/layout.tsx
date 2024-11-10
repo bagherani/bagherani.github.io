@@ -12,9 +12,11 @@ export const metadata: Metadata = {
   title: 'Mohi Bagherani',
 };
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body className={inter.className}>
         {children}
         <GoogleAnalytics />
